@@ -1,9 +1,12 @@
-package dev.andrefelix.CadastroDeClientes;
+package dev.andrefelix.CadastroDeClientes.Clientes;
 
+import dev.andrefelix.CadastroDeClientes.Servicos.ServicosModel;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
-@Table(name = "tb_cadastro")
+@Table(name = "tb_cliente")
 
 public class ClienteModel {
 
@@ -13,6 +16,9 @@ public class ClienteModel {
     private String nome;
     private String email;
     private int idade;
+    @ManyToOne
+    @JoinColumn(name = "servicos_id")
+    private ServicosModel servicos;
 
     public ClienteModel() {
     }

@@ -1,4 +1,4 @@
-package dev.andrefelix.CadastroDeClientes;
+package dev.andrefelix.CadastroDeClientes.Clientes;
 
 import org.springframework.web.bind.annotation.*;
 
